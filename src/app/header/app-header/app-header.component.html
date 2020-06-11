@@ -1,0 +1,20 @@
+<mat-toolbar color='primary' class="headerView">
+  <span>
+    <a [routerLink]="['/']">My Messages</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a [routerLink]="['/create']" [routerLinkActive]="'active'">New Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a [routerLink]="['/login']" routerLinkActive="active">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a [routerLink]="['/signup']" routerLinkActive="active">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
