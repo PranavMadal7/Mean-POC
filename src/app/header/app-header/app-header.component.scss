@@ -1,0 +1,23 @@
+.headerView{
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    li{
+      margin: auto 1rem;
+      font-size: 1rem;
+      .active{ background: blue; }
+    }
+  }
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+}
+
